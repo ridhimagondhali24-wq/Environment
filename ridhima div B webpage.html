@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Environment Awareness</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4CAF50, #a8e063);
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.container{
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff9800;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #e68900;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🌍 Save Environment</h1>
+
+<h2 id="title"></h2>
+<p id="content"></p>
+
+<button onclick="nextSlide()">Next</button>
+</div>
+
+<script>
+
+let slides = [
+{
+title: "🌱 Importance of Environment",
+content: "The environment provides air, water, food, and shelter. It supports life on Earth and keeps the ecosystem balanced. Protecting nature ensures a healthy future for humans and animals."
+},
+
+{
+title: "🌪 Environmental Disasters",
+content: "Environmental disasters include floods, wildfires, droughts, and hurricanes. Many disasters are becoming worse due to climate change and deforestation."
+},
+
+{
+title: "⚠️ Natural Calamities",
+content: "Natural calamities such as earthquakes, tsunamis, and landslides cause major destruction to life and property. Environmental protection and disaster preparedness can reduce damage."
+}
+
+];
+
+let index = 0;
+
+function showSlide(){
+document.getElementById("title").innerText = slides[index].title;
+document.getElementById("content").innerText = slides[index].content;
+}
+
+function nextSlide(){
+index++;
+if(index >= slides.length){
+index = 0;
+}
+showSlide();
+}
+
+showSlide();
+
+</script>
+
+</body>
+</html>
